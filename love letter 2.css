@@ -265,3 +265,32 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
+.controls {  
+  display: flex;  
+  justify-content: center; /* Menyusun tombol di tengah */  
+  padding: 20px; /* Memberikan padding di bawah */  
+}
+
+button {  
+  background-color: transparent; /* Warna tombol */  
+  color: #d9534f; /* Warna teks */  
+  border: solid 2px #d9534f;
+  padding: 15px; /* Padding tombol */  
+  text-align: center; /* Teks berada di tengah */  
+  display: inline-flex; /* Menggunakan flex untuk memposisikan ikon */  
+  justify-content: center; /* Menyusun konten di tengah */  
+  align-items: center; /* Menyusun vertikal di tengah */  
+  font-size: 15px; /* Ukuran font yang lebih besar untuk ikon */  
+  margin: 150px; /* Margin antara tombol */  
+  cursor: pointer; /* Menunjukkan kursor pointer */  
+  border-radius: 60%; /* Membuat tombol bulat */  
+  width: 50px; /* Lebar tombol */  
+  height: 50px; /* Tinggi tombol */  
+  transition: background-color 0.3s; /* Transisi warna saat hover */  
+}  
+
+button:hover {  
+  background-color: #d9534f;
+  color: #fff; 
+}

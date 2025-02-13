@@ -20,3 +20,17 @@ $(document).ready(function () {
     envelope.addClass("close").removeClass("open");
   }
 });
+// Mendapatkan elemen audio dan tombol  
+const music = document.getElementById('background-music');  
+const playPauseButton = document.getElementById('play-pause');  
+
+// Menambahkan event listener ke tombol Play/Pause  
+playPauseButton.addEventListener('click', function() {  
+    if (music.paused) {  
+        music.play(); // Memutar audio  
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Mengubah ikon menjadi "Pause"  
+    } else {  
+        music.pause(); // Menjeda audio  
+        playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Mengubah ikon menjadi "Play"  
+    }  
+});
