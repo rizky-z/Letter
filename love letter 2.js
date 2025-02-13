@@ -20,17 +20,16 @@ $(document).ready(function () {
     envelope.addClass("close").removeClass("open");
   }
 });
-// Mendapatkan elemen audio dan tombol  
-const music = document.getElementById('background-music');  
-const playPauseButton = document.getElementById('play-pause');  
+// Ambil elemen audio  
+const backgroundMusic = document.getElementById('background-music');  
+        
+// Tambahkan fungsionalitas untuk tombol Open  
+document.getElementById('open').onclick = function() {  
+    backgroundMusic.play(); // Memutar musik  
+};  
 
-// Menambahkan event listener ke tombol Play/Pause  
-playPauseButton.addEventListener('click', function() {  
-    if (music.paused) {  
-        music.play(); // Memutar audio  
-        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Mengubah ikon menjadi "Pause"  
-    } else {  
-        music.pause(); // Menjeda audio  
-        playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Mengubah ikon menjadi "Play"  
-    }  
-});
+// Tambahkan fungsionalitas untuk tombol Close  
+document.getElementById('reset').onclick = function() {  
+    backgroundMusic.pause(); // Menjeda musik  
+    backgroundMusic.currentTime = 0; // Mengatur ulang ke awal  
+};
